@@ -20,7 +20,7 @@ weather.addEventListener('submit', function(e) {
     }else{
       locationError.innerHTML = "";
     weatherImg.innerHTML = `
-<img src="${data.weatherIcon}" alt="today's weather">
+<img src="${data.weathericon}" alt="today's weather">
 `;
 
         locationResult.innerHTML = data.location;

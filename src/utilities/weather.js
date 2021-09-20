@@ -11,7 +11,7 @@ const weather = (latitude, longitude, callback) => {
         temperature: body.current.temperature,
         feelslike: body.current.feelslike,
         precip: body.current.precip * 100,
-        weatherIcon: body.current.weather_icons,
+        weathericon: body.current.weather_icons,
       });
       
     } else if (error) {
