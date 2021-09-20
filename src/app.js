@@ -38,6 +38,7 @@ app.get("/weather", (req, res) => {
         if (response) {
           res.send({
             location: responseG.location,
+            weatherIcon: response.weather_icons,
             temperature: response.temperature,
             feelslike: response.feelslike,
             precip: response.precip,

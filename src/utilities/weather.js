@@ -10,7 +10,8 @@ const weather = (latitude, longitude, callback) => {
       callback(undefined, {
         temperature: body.current.temperature,
         feelslike: body.current.feelslike,
-        precip: body.current.precip * 100
+        precip: body.current.precip * 100,
+        weatherIcon: body.current.weather_icons,
       });
       
     } else if (error) {
