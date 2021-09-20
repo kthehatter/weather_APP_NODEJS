@@ -13,8 +13,10 @@ weather.addEventListener('submit', function(e) {
       if (data.error) {
     console.log(data.error);
     locationError.innerHTML = data.error;
-          
+    locationResult.innerHTML = "";
+    locationForcast.innerHTML = "";
     }else{
+      locationError.innerHTML = "";
         locationResult.innerHTML = data.location;
         locationForcast.innerHTML = data.description;}
    
