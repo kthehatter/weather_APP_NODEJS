@@ -7,7 +7,7 @@ const locationError = document.getElementById('locationError');
 weather.addEventListener('submit', function(e) {
     e.preventDefault();
     var url = 
-  fetch("http://localhost:3000/weather?location=" +encodeURIComponent(locationInput.value)  ).then(function(response) {
+  fetch("/weather?location=" +encodeURIComponent(locationInput.value)  ).then(function(response) {
     return response.json();
   }).then(function(data) {
       if (data.error) {

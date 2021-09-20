@@ -5,7 +5,7 @@ const hbs = require("hbs");
 const geocoding = require("./utilities/geocode");
 const weather = require("./utilities/weather");
 const app = express();
-
+const port = process.env.PORT || 3000;
 //***** Setting up paths for express configuration *******/
 const publicPath = path.join(__dirname, "..", "public");
 const viewsPath = path.join(__dirname, "..", "templates/views");
@@ -70,7 +70,7 @@ app.get("*", (req, res) => {
     name: "Khalil",
   });
 });
-app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
+app.listen(port, () => {
+  console.log("Example app listening on port "+port);
 });
 
